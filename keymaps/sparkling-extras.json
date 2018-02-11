@@ -1,0 +1,5 @@
+{
+	"body atom-workspace": {
+		"cmd-m": "sparkling-extras:gitFiles"
+	}
+}
