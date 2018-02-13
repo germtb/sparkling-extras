@@ -2,7 +2,6 @@
 	"name": "sparkling-extras",
 	"main": "./dist/bundle",
 	"version": "0.0.0",
-	"activationEvents": ["sparkling-extras:gitFiles"],
 	"description": "Sparkling search extras",
 	"scripts": {
 		"build": "webpack",
@@ -15,9 +14,9 @@
 		"atom": ">=1.0.0 <2.0.0"
 	},
 	"consumedServices": {
-		"sparkling-search": {
+		"sparkling": {
 			"versions": {
-				"^0.0.0": "sparklingSearch"
+				"^0.1.0": "consumeSparkling"
 			}
 		}
 	},

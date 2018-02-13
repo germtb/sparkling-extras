@@ -111,25 +111,16 @@ var gitBranchesFactory = function gitBranchesFactory(React, store) {
 module.exports = {
 	subscriptions: null,
 
-	activate: function activate() {},
-	sparklingSearch: function (_sparklingSearch) {
-		function sparklingSearch() {
-			return _sparklingSearch.apply(this, arguments);
-		}
-
-		sparklingSearch.toString = function () {
-			return _sparklingSearch.toString();
-		};
-
-		return sparklingSearch;
-	}(function () {
+	activate: function activate() {
+		this.subscriptions = new _atom.CompositeDisposable();
+	},
+	consumeSparkling: function consumeSparkling(sparklingSearch) {
 		var gitBranches = sparklingSearch(gitBranchesFactory);
 
-		this.subscriptions = new _atom.CompositeDisposable();
 		this.subscriptions.add(atom.commands.add('atom-workspace', {
 			'sparkling-extras:gitBranches': gitBranches
 		}));
-	}),
+	},
 	deactivate: function deactivate() {
 		this.disposables = [];
 		this.subscriptions.dispose();
