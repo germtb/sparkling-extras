@@ -1,6 +1,6 @@
 {
 	"name": "sparkling-extras",
-	"main": "./dist/bundle",
+	"main": "./lib/sparkling-extras",
 	"version": "0.0.0",
 	"description": "Sparkling search extras",
 	"scripts": {

@@ -1,3 +1,5 @@
 {
-	"body atom-workspace": {}
+	"atom-workspace": {
+		"cmd-b cmd-b": "sparkling-extras:gitBranches"
+	}
 }
